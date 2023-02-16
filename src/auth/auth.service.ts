@@ -33,4 +33,12 @@ export class AuthService {
       ),
     };
   }
+
+  verifyToken(token: string) {
+    try {
+      return this.jwtService.verify(token);
+    } catch (error) {
+      return { error: error.massage };
+    }
+  }
 }
