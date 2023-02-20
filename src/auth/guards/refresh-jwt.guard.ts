@@ -6,7 +6,6 @@ import {
 } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { UsersService } from 'src/users/users.service';
-import { AuthService } from '../auth.service';
 
 @Injectable()
 export class RefreshJWTGuard implements CanActivate {
